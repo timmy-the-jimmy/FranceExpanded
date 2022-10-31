@@ -1,0 +1,49 @@
+﻿l_english:
+
+FRA_they_shall_not_pass:0 "They Shall Not Pass !"
+FRA_they_shall_not_pass_desc:0 "The heroism and the tenacity of the French during the great war, notably in Verdun still mark the spirits. This war will not be different from the previous one and we will push back our enemies once again."
+
+LOADING_TIP_91:0 "I don't think the Germans ever thought of attacking in the Sedan area.\n(Charles Huntziger, May 7, 1940.)"
+LOADING_TIP_92:0 "Very serious enemy effort towards the Meuse.\n(Air Force Intelligence Report, May 12, 1940.)"
+LOADING_TIP_93:0 "The Frenchman really looks like he's been abandoned by all the right minds, otherwise he could and should have prevented this.\n(Fedor Von Bock, learning of the Sedan breakthrough, May 14, 1940.)"
+LOADING_TIP_94:0 "It's all a matter of hours.\n(Maurice Gamelin, May 19, 1940, about the outbreak of the Allied counterattack, which will not take place until three days later.)"
+LOADING_TIP_95:0 "Lieutenant, are you happy with me?.\n(The last words of a French gunner from the 237th heavy artillery regiment, with both legs blown off and on the verge of death, June 6 1940.)"
+LOADING_TIP_96:0 "The war started off very badly. It must therefore continue...\n(Charles de Gaulle)"
+LOADING_TIP_97:0 "France lost a battle, but France didn't lose the war.\n(Charles de Gaulle, 1940)"
+LOADING_TIP_98:0 "It is with a heavy heart that I tell you that the fight must be stopped.\n(Philippe Pétain, June 17, 1940.)"
+LOADING_TIP_99:0 "I accept the heavy load you are asking me to take on. I will do what I can, but I cannot guarantee success.\n(Maxime Weygand, to Reynaud when he replaces Gamelin as Generalissimo, May 19, 1940.)"
+LOADING_TIP_100:0 "The French troops fought like lions!.\n(Walter von Reichenau, June 1940.)"
+LOADING_TIP_101:0 "It will absolutely be necessary for us, after the war, to forge an alliance capable of containing a country capable of military prowess which astonishes the world as in Bir Hakeim.\n(Hitler after the battle of Bir Hakeim)"
+LOADING_TIP_102:0 "There are three battles I will never forget: Stonne, Stalingrad and Montecassino.\n(Paul Wagner, after the war.)"
+LOADING_TIP_103:0 "Despite our overwhelming numerical superiority, the French are counter-attacking at several points. I don't understand how these soldiers, sometimes fighting 1 in 20, find the strength to storm.\n(General von Küchler, Dunkirk )"
+LOADING_TIP_104:0 "We received bad news, bad news all the time. An incredible atmosphere, a kind of moral wear and tear, after this accumulation in eight days of catastrophic news.\n(André Beaufre, France May 18 1940.)"
+LOADING_TIP_105:0 "Never interrupt your enemy when he makes a mistake.\n(Napoleon Bonaparte.)"
+LOADING_TIP_106:0 "if you build an army of 100 lions and their leader is a dog, in any fight, the lions will die like a dog. BUT if you build an army of 100 dogs and their leader is a lion, all dogs will fight like a lion.\n(Napoleon Bonaparte.)"
+LOADING_TIP_107:0 "I'm worried. Now we'll see what Gamelin is worth.\n(Paul Reynaud, May 10, 1940.)"
+
+FRA_democratic_party:0 "Alliance démocratique"
+FRA_democratic_party_sfio:0 "SFIO"
+FRA_democratic_party_sfio_long:0 "Section française de l'Internationale ouvrière"
+FRA_democratic_party_radical:0 "Parti radical"
+FRA_democratic_party_free:0 "Forces françaises libres"
+FRA_communism_party:0 "Parti communiste français"
+FRA_fascism_party:0 "Parti populaire français"
+FRA_fascism_party_croix_de_feu:0 "Croix-de-Feu"
+FRA_fascism_party_vichy:0 "Régime de Vichy"
+FRA_neutrality_party:0 "Action française"
+FRA_democratic_party_rey:0 "Divers Droite"
+
+
+histfrance.1.t:0 "Fall of the Blum Government"
+histfrance.1.d:0 "Following continued nationwide political unrest and the failure of Léon Blum to establish a stable ministry, the SFIO-led socialist government has collapsed. In the aftermath of this unfortunate turn of events, the liberal politician and former Prime Minister Édouard Daladier has once again assumed the position of President of the Council of Ministers and assembled a new cabinet.\n\nIt is uncertain exactly how the new government will differ from the late ministry, however a continuation of the existing policies concerning our relations abroad seems likely."
+histfrance.1.a:0 "Disappointing, but not entirely unexpected."
+
+
+histfrance.2.t:0 "Fall of the Daladier Government"
+histfrance.2.d:0 "Faced with the population's dissatisfaction with Edouard Daladier's political reforms and foreign policy, his government has now collapsed. Former finance minister Paul Reynaud will now assume the post of President of the Council of Ministers and assembled a new cabinet."
+histfrance.2.a:0 "We will see what this Reynaud is worth."
+
+
+france.99.t:0 "Start of the French Résistance"
+france.99.d:0 "From all over the metropolis and in our empires the French join de Gaulle. The very strong divisions of French society are forgotten in these difficult times. We gather every rifle, grenade, tank that we can find that could be used to fight the enemy. Everywhere the resistance is organized and becomes stronger.\n\nThe French take up arms and are ready to fight !"
+france.99.a:0 "Long live to the résistance !"

@@ -1,0 +1,267 @@
+FPM_inflation_increase = {
+	hidden_effect = {
+		if = {
+			limit = { has_idea = FPM_inflation_4}
+			swap_ideas = {
+				add_idea = FPM_inflation_5
+				remove_idea = FPM_inflation_4
+			}
+		}
+		else_if = {
+			limit = { has_idea = FPM_inflation_3 }
+			swap_ideas = {
+				add_idea = FPM_inflation_4
+				remove_idea = FPM_inflation_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = FPM_inflation_2 }
+			swap_ideas = {
+				add_idea = FPM_inflation_3
+				remove_idea = FPM_inflation_2
+			}
+		}
+	
+		else_if = {
+			limit = { has_idea = FPM_inflation_1 }
+			swap_ideas = {
+				add_idea = FPM_inflation_2
+				remove_idea = FPM_inflation_1
+			}
+		}
+	}
+}
+
+FPM_inflation_decrease = {
+	hidden_effect = {
+		if = {
+			limit = { has_idea = FPM_inflation_2}
+			swap_ideas = {
+				add_idea = FPM_inflation_1
+				remove_idea = FPM_inflation_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = FPM_inflation_3 }
+			swap_ideas = {
+				add_idea = FPM_inflation_2
+				remove_idea = FPM_inflation_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = FPM_inflation_4 }
+			swap_ideas = {
+				add_idea = FPM_inflation_3
+				remove_idea = FPM_inflation_4
+			}
+		}
+	
+		else_if = {
+			limit = { has_idea = FPM_inflation_5 }
+			swap_ideas = {
+				add_idea = FPM_inflation_4
+				remove_idea = FPM_inflation_5
+			}
+		}
+	}
+}
+
+FPM_econ_increase_1 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = -0.01
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = 0.01
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = 0.01
+		}
+		custom_effect_tooltip = FPM_fe_p1
+	}
+}
+
+FPM_econ_increase_2 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = -0.02
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = 0.02
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = 0.02
+		}
+		custom_effect_tooltip = FPM_fe_p2
+	}
+}
+
+FPM_econ_increase_3 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = -0.03
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = 0.03
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = 0.03
+		}
+		custom_effect_tooltip = FPM_fe_p3
+	}
+}
+
+FPM_econ_increase_4 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = -0.04
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = 0.04
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = 0.04
+		}
+		custom_effect_tooltip = FPM_fe_p4
+	}
+}
+
+FPM_econ_increase_5 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = -0.05
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = 0.05
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = 0.05
+		}
+		custom_effect_tooltip = FPM_fe_p5
+	}
+}
+
+FPM_econ_decrease_1 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = 0.01
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = -0.01
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = -0.01
+		}
+		custom_effect_tooltip = FPM_fe_n1
+	}
+}
+
+FPM_econ_decrease_2 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = 0.02
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = -0.02
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = -0.02
+		}
+		custom_effect_tooltip = FPM_fe_n2
+	}
+}
+
+FPM_econ_decrease_3 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = 0.03
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = -0.03
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = -0.03
+		}
+		custom_effect_tooltip = FPM_fe_n3
+	}
+}
+
+FPM_econ_decrease_4 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = 0.04
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = -0.04
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = -0.04
+		}
+		custom_effect_tooltip = FPM_fe_n4
+	}
+}
+
+FPM_econ_decrease_5 = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = FRA_economy_dynamic_modifier
+			}
+		}
+		add_to_variable = {
+			FPM_eco_consumer_goods_factor = 0.05
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_factory = -0.05
+		}
+		add_to_variable = {
+			FPM_eco_industrial_capacity_dockyard = -0.05
+		}
+		custom_effect_tooltip = FPM_fe_n5
+	}
+}
