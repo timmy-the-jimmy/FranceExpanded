@@ -1,0 +1,5 @@
+opinion_modifiers = {
+	concessions_to_soviets = {
+		value = -20
+	}
+}
