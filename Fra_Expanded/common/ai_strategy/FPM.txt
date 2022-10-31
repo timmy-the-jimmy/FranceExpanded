@@ -1,4 +1,4 @@
-FPM_phoney_war = {
+FPM_phoney_war = { #don't go to war with benelux early
 	allowed = {
 		original_tag = GER
 	}
@@ -32,7 +32,7 @@ FPM_phoney_war = {
 	}
 }
 
-FPM_pw_ita = {
+FPM_pw_ita = { #don't ally germans until focus is completed
 	allowed = {
 		original_tag = ITA
 	}
@@ -55,7 +55,7 @@ FPM_pw_ita = {
 	}
 }
 
-FPM_pw_ger = {
+FPM_pw_ger = { #don't ally italians until focus is completed
 	allowed = {
 		original_tag = GER
 	}

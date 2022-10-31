@@ -1,0 +1,90 @@
+ideas = {
+
+	country = {
+
+		FRA_they_shall_not_pass = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = ast_volunteer_defence_corps
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				war_stability_factor = 0.10
+				conscription_factor = 0.03
+				}
+		}
+		
+		FRA_defense = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = YUG_federal_defense_council
+			
+			modifier = {
+				war_support_weekly_factor = 0.01
+				weekly_casualties_war_support = 0.01
+				weekly_bombing_war_support = 0.01
+				}
+		}
+		
+		FRA_Dyle = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = chi_army_corruption3
+			
+			modifier = {
+				planning_speed = 0.15
+				recon_factor = 0.05
+				}
+		}
+
+		FRA_Norway = {
+			
+			allowed = {
+				original_tag = FRA
+				always = yes
+			}
+
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1
+
+			picture = generic_war_preparation
+			
+			modifier = {
+				acclimatization_cold_climate_gain_factor = 0.1
+				}
+		}
+	}
+}
