@@ -2,6 +2,9 @@
 
 FRA_they_shall_not_pass:0 "They Shall Not Pass !"
 FRA_they_shall_not_pass_desc:0 "The heroism and the tenacity of the French during the great war, notably in Verdun still mark the spirits. This war will not be different from the previous one and we will push back our enemies once again."
+FRA_Dyle:0 "Dyle-Breda plan"
+FRA_Norway:0 "Securing Scandinavia"
+FRA_defense:0 "Défence Passive"
 
 LOADING_TIP_91:0 "I don't think the Germans ever thought of attacking in the Sedan area.\n(Charles Huntziger, May 7, 1940.)"
 LOADING_TIP_92:0 "Very serious enemy effort towards the Meuse.\n(Air Force Intelligence Report, May 12, 1940.)"
@@ -33,6 +36,14 @@ FRA_fascism_party_vichy:0 "Régime de Vichy"
 FRA_neutrality_party:0 "Action française"
 FRA_democratic_party_rey:0 "Divers Droite"
 
+FRA_dyle_plan:0 "Dyle-Breda Plan"
+FRA_norway_plan:0 "Scandinavian Intervention"
+FRA_dyle_plan_desc:0 "The Dyle-Breda plan consist of a consistent support of the French Army in the Benelux Region"
+FRA_norway_plan_desc:0 "With Germany interests in Scandinavia, we need to coordinate an intervention in case of a possible attack"
+FRA_Germany:0 "Prepare for the German Threat"
+FRA_Germany_desc:0 "Germany has broken the Versailles treaty numerous times this following years, we must be ready in case of a possible threat comming from them"
+FRA_fortification_focus:0 "Défense Passive"
+FRA_fortification_focus_desc:0 "Civilians shouldn't need to suffer in war, we need to distributes helmets, gaz masks and make prevention to prevent that !"
 
 histfrance.1.t:0 "Fall of the Blum Government"
 histfrance.1.d:0 "Following continued nationwide political unrest and the failure of Léon Blum to establish a stable ministry, the SFIO-led socialist government has collapsed. In the aftermath of this unfortunate turn of events, the liberal politician and former Prime Minister Édouard Daladier has once again assumed the position of President of the Council of Ministers and assembled a new cabinet.\n\nIt is uncertain exactly how the new government will differ from the late ministry, however a continuation of the existing policies concerning our relations abroad seems likely."

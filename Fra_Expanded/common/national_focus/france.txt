@@ -882,7 +882,7 @@
 			y = 0
 		}
 		prerequisite = { focus = FRA_defensive_focus }
-		mutually_exclusive = { focus = FRA_methodical_battle }
+		mutually_exclusive = { focus = FRA_Germany }
 		relative_position_id = FRA_defensive_focus
 		cost = 10
 
@@ -906,8 +906,8 @@
 		}
 	}
 	focus = {
-		id = FRA_methodical_battle
-		icon = GFX_goal_generic_cavalry
+		id = FRA_Germany
+		icon = GFX_focus_attack_germany
 		x = 0
 		y = 1
 		offset = {
@@ -928,7 +928,11 @@
 		}
 		
 		bypass = {
+			OR = {
+				is_in_faction_with = GER
+				has_war_with = GER
 
+		}
 		}
 
 		cancel_if_invalid = yes
@@ -946,22 +950,22 @@
 	}
 	focus = {
 		id = FRA_fortification_focus
-		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = FRA_methodical_battle }
+		icon = GFX_goal_continuous_def_against_influence
+		prerequisite = { focus = FRA_Germany }
 		x = 0
 		y = 1
-		relative_position_id = FRA_methodical_battle
+		relative_position_id = FRA_Germany
 		cost = 10
 
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_ideas = FRA_fortification_focus
+				add_ideas = FRA_defense
 		}
 	}
 	focus = {
-		id = FRA_alpine_forts
-		icon = GFX_goal_generic_construct_military
+		id = FRA_dyle_plan
+		icon = GFX_focus_SOV_mobilization_plan
 		prerequisite = { focus = FRA_fortification_focus }
 		x = 0
 		y = 1
@@ -973,22 +977,16 @@
 		}
 
 		completion_reward = {
-			ROOT = { country_event = { id = france.3 } }
-			ITA = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = FRA_alpine_forts
-				}
-			}
+			add_ideas = FRA_Dyle
 		}
 	}
 	focus = {
-		id = FRA_extend_the_maginot_line
-		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = FRA_alpine_forts }
+		id = FRA_norway_plan
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = FRA_dyle_plan }
 		x = 0
 		y = 1
-		relative_position_id = FRA_alpine_forts
+		relative_position_id = FRA_dyle_plan
 		cost = 10
 
 		available = {
@@ -998,17 +996,7 @@
 			has_idea = FRA_protected_by_the_maginot_line
 		}
 		completion_reward = {
-			ROOT = { country_event = { id = france.2 } }
-			BEL = {
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = FRA_extend_the_maginot_line_focus_neg
-				}
-				add_opinion_modifier = {
-					target = GER
-					modifier = FRA_extend_the_maginot_line_focus_pos
-				}
-			}
+			add_ideas = FRA_Norway
 		}
 	}
 	focus = {
@@ -1072,16 +1060,19 @@
 	focus = {
 		id = FRA_division_cuirassee
 		icon = GFX_focus_generic_army_tanks2
-		x = 0
+		x = 4
 		y = 1
 		offset = {
 			x = 0
 			y = 0
 		}
-		prerequisite = { focus = FRA_heavy_armor_focus }
+		prerequisite = {
+			 focus = FRA_norway_plan 
+		}
+
 		mutually_exclusive = { }
 		relative_position_id = FRA_heavy_armor_focus
-		cost = 2
+		cost = 2 #change to 5?
 
 		ai_will_do = {
 			factor = 1
@@ -1508,10 +1499,10 @@
 		prerequisite = { 
 			focus = FRA_light_medium_armor 
 			focus = FRA_heavy_armor_focus 
-			focus = FRA_extend_the_maginot_line
+			focus = FRA_norway_plan
 			focus = FRA_flying_artillery
 		}
-		x = -1
+		x = 0
 		y = 1
 		relative_position_id = FRA_light_medium_armor
 		cost = 10
@@ -4035,6 +4026,53 @@
 		}
 	}
 	focus = {
+		id = FRA_general_work_council
+		icon = GFX_goal_generic_construction
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		allow_branch = {
+			OR = {
+				has_country_leader_ideology = socialism
+				has_government = communism
+				NOT = {
+					has_country_flag = FPM_election_happened
+				}
+				has_completed_focus = FRA_revive_the_national_bloc
+			}
+		}
+		prerequisite = {
+			focus = FRA_request_emergency_powers
+		}
+		relative_position_id = FRA_request_emergency_powers
+		cost = 5
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = FPM_political_crisis_over
+				has_country_flag = political_crisis_over
+			}
+		}
+		
+		bypass = {
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			custom_effect_tooltip = FPM_civ_upgrade
+		}
+	}
+	focus = {
 		id = FRA_dirigisme
 		icon = GFX_focus_generic_the_giant_wakes
 		x = -1
@@ -4161,53 +4199,6 @@
 					instant_build = yes
 				}
 			}
-		}
-	}
-	focus = {
-		id = FRA_general_work_council
-		icon = GFX_goal_generic_construction
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		allow_branch = {
-			OR = {
-				has_country_leader_ideology = socialism
-				has_government = communism
-				NOT = {
-					has_country_flag = FPM_election_happened
-				}
-				has_completed_focus = FRA_revive_the_national_bloc
-			}
-		}
-		prerequisite = {
-			focus = FRA_request_emergency_powers
-		}
-		relative_position_id = FRA_request_emergency_powers
-		cost = 5
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = FPM_political_crisis_over
-				has_country_flag = political_crisis_over
-			}
-		}
-		
-		bypass = {
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			custom_effect_tooltip = FPM_civ_upgrade
 		}
 	}
 	focus = {
@@ -6379,6 +6370,42 @@
 		}
 	}
 	focus = {
+		id = FRA_promote_entrepeneurship
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 1
+		offset = {
+			x = 0
+			y = 0
+		}
+		prerequisite = {
+			focus = FRA_agricultural_protectionism
+			focus = FRA_laissez_faire
+		}
+		relative_position_id = FRA_agricultural_protectionism
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			
+		}
+		
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = { FPM_entrepeneurship }
+		}
+	}
+	focus = {
 		id = FRA_economic_devolution
 		icon = GFX_goal_generic_positive_trade_relations
 		x = 0
@@ -6427,42 +6454,6 @@
 			}
 			custom_effect_tooltip = FPM_fe_p10
 			FRA_communism_riot_effect = yes
-		}
-	}
-	focus = {
-		id = FRA_promote_entrepeneurship
-		icon = GFX_goal_generic_propaganda
-		x = 0
-		y = 1
-		offset = {
-			x = 0
-			y = 0
-		}
-		prerequisite = {
-			focus = FRA_agricultural_protectionism
-			focus = FRA_laissez_faire
-		}
-		relative_position_id = FRA_agricultural_protectionism
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			
-		}
-		
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = { FPM_entrepeneurship }
 		}
 	}
 	focus = {

@@ -1,0 +1,224 @@
+### MILITARY STUFF
+
+ENG_trying_to_save_benelux_is_deathtrap = {
+	allowed = { original_tag = ENG }
+	enable = {
+		has_war_with = GER
+		date < 1941.6.1
+		OR = {
+			HOL = { has_capitulated = no }
+			BEL = { has_capitulated = no }
+		}
+	}
+
+	abort = {
+		OR = {
+			date > 1941.6.1
+			AND = {
+				HOL = { has_capitulated = yes }
+				BEL = { has_capitulated = yes }
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HOL"
+		value = 70
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "BEL"
+		value = 0.3
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "LUX"
+		value = 50
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		# french states bordering benelux
+		states = {
+			29
+			785
+			18
+		}
+		ratio = 0.30
+		area = europe
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+}
+
+ENG_evacuate_troops_after_fall_of_france = {
+	allowed = {
+		OR = {
+			tag = ENG
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	enable = {
+		is_historical_focus_on = yes
+		OR = {
+			date < 1941.6.1
+			SOV = {
+				surrender_progress < 0.65
+				date < 1941.6.1
+			}
+		}
+		has_global_flag = FRA_already_surrendered
+	}
+
+	ai_strategy = {
+		type = front_unit_request
+		area = mainland_europe
+		value = -100
+	}
+}
+
+ENG_time_to_ditch_FRA = {
+	allowed = {
+		original_tag = ENG
+	}
+
+	enable = {
+		is_historical_focus_on = yes
+		FRA = {
+			has_capitulated = no
+			surrender_progress > 0.70
+		}
+		OR = {
+			NOT = { has_global_flag = FRA_already_surrendered }
+			#lets give a month of retreat time after capitulation
+			set_temp_variable = { t = global.num_days }
+			subtract_from_temp_variable = { t = global.FRA_capitulation_days }
+			check_variable = { t < 30 }
+		}
+	}
+
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = FRA
+		value = 50
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = BEL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = HOL
+		value = 100
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = LUX
+		value = 100
+	}
+}
+
+dont_get_sucked_into_FRA_and_die = {
+
+	enable = {
+		OR = {
+			tag = ENG
+			is_subject_of = ENG
+		}
+		has_war_with = GER
+		has_war_together_with = FRA
+
+		date < 1941.9.9
+
+		NOT = { has_global_flag = FRA_already_surrendered }
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = front_unit_request
+		area = europe
+		value = 50
+	}
+
+	ai_strategy = {
+  		type = garrison
+   		value = 70
+   	}
+}
+
+ENG_norway_is_not_THAT_important = {
+	allowed = {
+		original_tag = ENG
+	}
+	enable = {
+		date < 1945.1.1
+
+		OR = {
+			is_in_faction_with = ENG # anyone in allies
+			tag = FRA
+		}
+	}
+	abort_when_not_enabled = yes
+
+	ai_strategy = {
+		type = area_priority
+		id = scandinavia
+		value = 30
+	}
+}
+
+FRA_benelux_will_surely_not_fall = {
+	allowed = { original_tag = FRA }
+	enable = {
+		has_war_with = GER
+		date < 1940.8.1
+		OR = {
+			HOL = { has_capitulated = no }
+			BEL = { has_capitulated = no }
+		}
+	}
+
+	abort = {
+		OR = {
+			date > 1940.8.1
+			AND = {
+				HOL = { surrender_progress > 0.50 }
+				BEL = { surrender_progress > 0.20 }
+			}
+		}
+	}
+
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "HOL"
+		value = 50
+	}
+	ai_strategy = {
+		type = force_defend_ally_borders
+		id = "BEL"
+		value = 0.5
+	}
+	ai_strategy = {
+		type = dont_defend_ally_borders
+		id = "LUX"
+		value = 50
+	}
+	ai_strategy = {
+		type = put_unit_buffers
+		# french states bordering benelux
+		states = {
+			29
+			785
+			18
+		}
+		ratio = 0.4
+		area = europe
+		subtract_invasions_from_need = no
+		subtract_fronts_from_need = yes
+	}
+}
