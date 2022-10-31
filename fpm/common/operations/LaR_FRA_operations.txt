@@ -78,7 +78,7 @@ FRA_instigate_workers_revolution_britain = { ### 1/25
 				ENG = {
 					OR = {
 						communism < 0.25
-						stability > 0.74
+						has_stability  > 0.74
 					}
 				}
 			}
@@ -270,7 +270,7 @@ FRA_instigate_workers_revolution_italy = { ### 1/25
 				ITA = {
 					OR = {
 						communism < 0.25
-						stability > 0.74
+						has_stability > 0.74
 					}
 				}
 			}
@@ -394,7 +394,7 @@ FRA_instigate_workers_revolution_spain = { ### 1/25
 				SPR = {
 					OR = {
 						communism < 0.25
-						stability > 0.74
+						has_stability > 0.74
 					}
 				}
 			}
@@ -521,7 +521,7 @@ FRA_instigate_workers_revolution_germany = { ### 1/25
 				GER = {
 					OR = {
 						communism < 0.25
-						stability > 0.74
+						has_stability > 0.74
 					}
 				}
 			}
