@@ -1,6 +1,0 @@
-spriteTypes = {
-	spriteType = {
-		name = GFX_portrait_FRA_jacques_duclos_small
-		texturefile = "gfx/interface/ideas/idea_FRA_jacques.dds"
-	}
-}
