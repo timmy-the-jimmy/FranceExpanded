@@ -1,0 +1,9 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			FRA = {
+				remove_ideas = FPM_inefficient_economy_fake
+			}
+		}
+	}
+}

@@ -1,0 +1,19 @@
+FRA_economy_dynamic_modifier = { #NATIONAL SPIRIT
+	enable = { always = yes }
+
+	icon = GFX_idea_generic_local_self_management
+	#INITIAL
+	consumer_goods_factor = FPM_eco_consumer_goods_factor #0.2
+	industrial_capacity_factory = FPM_eco_industrial_capacity_factory #-0.2
+	industrial_capacity_dockyard = FPM_eco_industrial_capacity_dockyard #-0.2
+
+}
+
+FRA_commie_strikes_modifier = {
+	enable = { always = yes }
+
+	icon = GFX_idea_FRA_factory_strikes
+
+	industrial_capacity_factory = FPM_strike_industrial_capacity_factory #-0.25
+	industrial_capacity_dockyard = FPM_strike_industrial_capacity_dockyard #-0.25
+}
