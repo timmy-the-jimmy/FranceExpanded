@@ -1,74 +1,4 @@
 FPM_debug = {
-	FPM_inflation_debug_1 = {
-
-		icon = ger_mefo_bills
-
-		available = { }
-
-		visible = {
-			is_debug = yes
-		}
-
-		complete_effect = {
-			add_ideas = FPM_inflation_1
-		}
-	}
-	FPM_inflation_debug_2 = {
-
-		icon = ger_mefo_bills
-
-		available = { }
-
-		visible = {
-			is_debug = yes
-		}
-
-		complete_effect = {
-			add_ideas = FPM_inflation_2
-		}
-	}
-	FPM_inflation_debug_3 = {
-
-		icon = ger_mefo_bills
-
-		available = { }
-
-		visible = {
-			is_debug = yes
-		}
-
-		complete_effect = {
-			add_ideas = FPM_inflation_3
-		}
-	}
-	FPM_inflation_debug_4 = {
-
-		icon = ger_mefo_bills
-
-		available = { }
-
-		visible = {
-			is_debug = yes
-		}
-
-		complete_effect = {
-			add_ideas = FPM_inflation_4
-		}
-	}
-	FPM_inflation_debug_5 = {
-
-		icon = ger_mefo_bills
-
-		available = { }
-
-		visible = {
-			is_debug = yes
-		}
-
-		complete_effect = {
-			add_ideas = FPM_inflation_5
-		}
-	}
 	FPM_inflation_debug_r = {
 
 		icon = ger_mefo_bills
@@ -101,7 +31,6 @@ FPM_debug = {
 			clr_country_flag = monetary_policy_in_progress
 		}
 	}
-
 	FPM_raise_inflation = {
 
 		icon = ger_mefo_bills
